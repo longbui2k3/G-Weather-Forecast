@@ -1,8 +1,8 @@
 import { Global, Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { EmailController } from 'src/controllers/email.controller';
-import { SubscriberSchema } from 'src/models/subscriber.model';
-import { EmailService } from 'src/services/email.service';
+import { EmailController } from '../controllers/email.controller';
+import { SubscriberSchema } from '../models/subscriber.model';
+import { EmailService } from '../services/email.service';
 
 @Global()
 @Module({

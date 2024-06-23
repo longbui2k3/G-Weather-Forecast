@@ -1,8 +1,8 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Subscriber } from 'src/models/subscriber.model';
-import { Email } from 'src/utils/email';
+import { Subscriber } from '../models/subscriber.model';
+import { Email } from '../utils/email';
 import * as crypto from 'crypto';
 @Injectable()
 export class EmailService {

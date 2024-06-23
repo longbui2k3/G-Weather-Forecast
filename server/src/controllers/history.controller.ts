@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { HistoryService } from 'src/services/history.service';
+import { HistoryService } from '../services/history.service';
 
 @Controller('/api/v1/history')
 export class HistoryController {
