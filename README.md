@@ -1,4 +1,4 @@
-## G-Weather-Forcast
+## G-Weather-Forecast
 ## Frontend
 1. Open the terminal
 2. Navigate to the frontend folder using `cd client`

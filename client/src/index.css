@@ -25,3 +25,43 @@ button:disabled {
   background-color: #cccccc;
   color: #666666;
 }
+
+#main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  background-color: rgb(227, 242, 253);
+}
+#sub__body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#left__main {
+  width: 30%;
+  padding: 30px;
+}
+#right__main {
+  width: 70%;
+  padding: 30px;
+}
+@media screen and (max-width: 920px) {
+  #main {
+    display: flex;
+    flex-direction: column;
+  }
+  #left__main {
+    width: 100%;
+  }
+  #right__main {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #sub__body {
+    height: 100%;
+  }
+  #card {
+    margin-bottom: 20px;
+  }
+}

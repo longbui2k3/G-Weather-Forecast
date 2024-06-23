@@ -3,34 +3,16 @@ import { CityWeather, Header, Search, Subscribe } from "../components";
 
 export function PageHome() {
   const [location, setLocation] = useState("London");
-  const [current, setCurrent] = useState({});
+  const [current, setCurrent] = useState(null);
   const [forecastday, setForecastday] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isLoading2, setIsLoading2] = useState(false);
 
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <div id="sub__body">
       <Header title={"Weather Dashboard"} />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexGrow: "1",
-          backgroundColor: "rgb(227,242,253)",
-        }}
-      >
-        <div
-          style={{
-            width: "30%",
-            padding: "30px",
-          }}
-        >
+      <div id="main" style={{}}>
+        <div id="left__main">
           <Search
             location={location}
             setLocation={setLocation}
@@ -44,12 +26,9 @@ export function PageHome() {
           <Subscribe />
         </div>
         <div
-          style={{
-            width: "70%",
-            padding: "30px",
-          }}
+          id="right__main"
         >
-          {!isLoading && !isLoading2 ? (
+          {!isLoading && !isLoading2 && current ? (
             <CityWeather current={current} forecastday={forecastday} />
           ) : (
             ""

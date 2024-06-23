@@ -14,7 +14,7 @@ export function FourDayForest({ forecastday }) {
         <div
           style={{ fontSize: "26px", fontWeight: "650", margin: "30px 0px" }}
         >
-          4-Day Forest
+          4-Day Forecast
         </div>
         <div style={{ display: "flex", margin: "auto 0" }}>
           <button
@@ -63,13 +63,21 @@ export function FourDayForest({ forecastday }) {
           </button>
         </div>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+        }}
+      >
         {forecastday
           .map((value, i) => (
             <div
+              id="card"
               style={{
                 display: "flex",
                 flexDirection: "column",
+                flexWrap: "wrap",
                 justifyContent: "space-between",
                 height: "210px",
                 width: "180px",
