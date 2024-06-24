@@ -15,6 +15,9 @@ export function Subscribe() {
         mode: "cors",
         credentials: "include",
         headers: {
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, DELETE, PUT",
           Accept: "application/json",
           "Content-Type": "application/json;charset=UTF-8",
         },
