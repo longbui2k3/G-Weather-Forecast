@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_ORIGIN } from "../utils/globalVariable";
 
 export function Subscribe() {
   const [isLoading, setIsLoading] = useState(false);
@@ -9,7 +10,7 @@ export function Subscribe() {
     try {
       setIsLoading(true);
       setMessage("");
-      const response = await fetch("http://localhost:4000/api/v1/email/send", {
+      const response = await fetch(`${API_ORIGIN}/api/v1/email/send`, {
         method: "POST",
         headers: {
           Accept: "application/json",

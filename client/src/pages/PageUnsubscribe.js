@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Header } from "../components";
 import { useEffect, useState } from "react";
+import { API_ORIGIN } from "../utils/globalVariable";
 
 export function PageUnsubscribe() {
   const param = useParams();
@@ -10,7 +11,7 @@ export function PageUnsubscribe() {
     if (!param.tokenUnsubscribe) return;
     (async () => {
       const response = await fetch(
-        `http://localhost:4000/api/v1/email/unsubscribe/${param.tokenUnsubscribe}`
+        `${API_ORIGIN}/api/v1/email/unsubscribe/${param.tokenUnsubscribe}`
       );
       setStatus(response.status);
       const data = await response.json();

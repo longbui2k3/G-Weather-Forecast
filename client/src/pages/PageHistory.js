@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Header } from "../components";
 import { TodayWeather } from "../components/TodayWeather";
-const ORIGIN = "http://localhost:4000";
+import { API_ORIGIN } from "../utils/globalVariable";
 export function PageHistory() {
   const [histories, setHistories] = useState([]);
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch(`${ORIGIN}/api/v1/history`);
+        const response = await fetch(`${API_ORIGIN}/api/v1/history`);
         const data = await response.json();
         console.log(data);
         setHistories(data);

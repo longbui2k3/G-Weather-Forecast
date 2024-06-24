@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-const ORIGIN = "http://localhost:4000";
+import { API_ORIGIN } from "../utils/globalVariable";
 export function Search({
   location,
   setLocation,
@@ -13,7 +13,7 @@ export function Search({
   async function saveToHistory(current) {
     //save to history
     try {
-      const response = await fetch(`${ORIGIN}/api/v1/history`, {
+      const response = await fetch(`${API_ORIGIN}/api/v1/history`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -37,7 +37,7 @@ export function Search({
     try {
       setIsLoading(true);
       const response = await fetch(
-        `${ORIGIN}/api/v1/search?location=${location}`
+        `${API_ORIGIN}/api/v1/search?location=${location}`
       );
       const data = await response.json();
 
@@ -51,7 +51,7 @@ export function Search({
     setIsLoading2(true);
     const responseGetIP = await fetch("https://geolocation-db.com/json/");
     const ip = (await responseGetIP.json()).IPv4;
-    const response = await fetch(`${ORIGIN}/api/v1/search?location=${ip}`);
+    const response = await fetch(`${API_ORIGIN}/api/v1/search?location=${ip}`);
     const data = await response.json();
     await saveToHistory(data.current);
     setCurrent(data.current);

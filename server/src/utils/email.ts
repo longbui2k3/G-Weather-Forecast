@@ -1,5 +1,5 @@
 import * as nodemailer from 'nodemailer';
-const ORIGIN = 'http://localhost:3000';
+import { CLIENT_ORIGIN } from './globalVariables';
 export class Email {
   email: string;
   token: string;
@@ -24,8 +24,8 @@ export class Email {
       html: `
             <h3>G-Weather Forecast ✅</h3>
             <p>Welcome!</p>
-            <p>We have received the email confirmation request for subscription <a href="${ORIGIN}/confirm/${this.token}">Click Here</a> to confirm the email</p>
-            <p>OR <a href="${ORIGIN}/unsubscribe/${this.token}">Unsubscribe</a>.</p>`, // html body
+            <p>We have received the email confirmation request for subscription <a href="${CLIENT_ORIGIN}/confirm/${this.token}">Click Here</a> to confirm the email</p>
+            <p>OR <a href="${CLIENT_ORIGIN}/unsubscribe/${this.token}">Unsubscribe</a>.</p>`, // html body
     });
   }
 }

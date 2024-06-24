@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Header } from "../components";
 import { useParams } from "react-router-dom";
+import { API_ORIGIN } from "../utils/globalVariable";
 
 export function PageConfirm() {
   const param = useParams();
@@ -10,7 +11,7 @@ export function PageConfirm() {
     if (!param.tokenConfirm) return;
     (async () => {
       const response = await fetch(
-        `http://localhost:4000/api/v1/email/confirm/${param.tokenConfirm}`
+        `${API_ORIGIN}/api/v1/email/confirm/${param.tokenConfirm}`
       );
       setStatus(response.status);
       const data = await response.json();
