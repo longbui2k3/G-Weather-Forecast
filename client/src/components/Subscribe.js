@@ -17,7 +17,7 @@ export function Subscribe() {
         headers: {
           "Access-Control-Allow-Credentials": "true",
           "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET, POST, DELETE, PUT",
+          "Access-Control-Allow-Methods": "GET, POST, DELETE, PUT, OPTIONS",
           Accept: "application/json",
           "Content-Type": "application/json;charset=UTF-8",
         },
