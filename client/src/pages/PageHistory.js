@@ -9,7 +9,6 @@ export function PageHistory() {
       try {
         const response = await fetch(`${API_ORIGIN}/api/v1/history`);
         const data = await response.json();
-        console.log(data);
         setHistories(data);
       } catch (err) {
         console.log(err);
