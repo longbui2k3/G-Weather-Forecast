@@ -15,14 +15,14 @@ export function Search({
     try {
       const response = await fetch(`${API_ORIGIN}/api/v1/history`, {
         method: "POST",
-        body: JSON.stringify({
+        body: {
           location: current.name,
           date: current.last_updated,
           temperature: current.temp_c,
           wind: current.wind_mph,
           humidity: current.humidity,
           condition: current.condition,
-        }),
+        },
       });
       await response.json();
     } catch (err) {
