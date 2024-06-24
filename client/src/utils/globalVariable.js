@@ -1,1 +1,1 @@
-export const API_ORIGIN = "https://g-weather-forcast-re7m.vercel.app/";
+export const API_ORIGIN = "https://g-weather-forcast-re7m.vercel.app";
