@@ -15,8 +15,6 @@ export class EmailController {
   constructor(private emailService: EmailService) {}
 
   @Post('/send')
-  @Header('Accept', 'application/json')
-  @Header('Content-Type', 'application/json;charset=UTF-8')
   async sendEmail(@Body() body: { email: string }) {
     return await this.emailService.sendEmail(body.email);
   }

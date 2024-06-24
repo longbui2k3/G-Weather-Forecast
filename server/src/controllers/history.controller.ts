@@ -11,8 +11,6 @@ export class HistoryController {
   }
 
   @Post('/')
-  @Header('Accept', 'application/json')
-  @Header('Content-Type', 'application/json;charset=UTF-8')
   async createHistory(
     @Body()
     body: {
