@@ -65,3 +65,8 @@ button:disabled {
     margin-bottom: 20px;
   }
 }
+@media screen and (max-height: 1550px) {
+  #sub__body {
+    height: 100%;
+  }
+}
