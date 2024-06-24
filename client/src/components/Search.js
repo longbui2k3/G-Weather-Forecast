@@ -15,6 +15,11 @@ export function Search({
     try {
       const response = await fetch(`${API_ORIGIN}/api/v1/history`, {
         method: "POST",
+        mode: "cors",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
           location: current.name,
           date: current.last_updated,
