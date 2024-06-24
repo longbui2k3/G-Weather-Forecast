@@ -1,8 +1,9 @@
 import axios from "axios";
+import { API_ORIGIN } from "../utils/globalVariable";
 
 export const createHistory = async (body) => {
   try {
-    const res = await axios.post("http://localhost:8000/api/v1/message", body);
+    const res = await axios.post(`${API_ORIGIN}/api/v1/history`, body);
     return res.data;
   } catch (err) {
     console.log(err);
