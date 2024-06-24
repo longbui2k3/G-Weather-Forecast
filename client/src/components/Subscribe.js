@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { API_ORIGIN } from "../utils/globalVariable";
+import { sendEmail } from "../api/sendEmail";
 
 export function Subscribe() {
   const [isLoading, setIsLoading] = useState(false);
@@ -10,13 +11,7 @@ export function Subscribe() {
     try {
       setIsLoading(true);
       setMessage("");
-      const response = await fetch(`${API_ORIGIN}/api/v1/email/send`, {
-        method: "POST",
-        body: JSON.stringify({
-          email,
-        }),
-      });
-      const data = await response.json();
+      const data = await sendEmail(email);
       setMessage(data.message);
       setIsLoading(false);
     } catch (err) {
