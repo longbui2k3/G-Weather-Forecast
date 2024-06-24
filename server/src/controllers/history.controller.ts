@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Header, Post } from '@nestjs/common';
 import { HistoryService } from '../services/history.service';
 
 @Controller('/api/v1/history')
@@ -11,6 +11,8 @@ export class HistoryController {
   }
 
   @Post('/')
+  @Header('Accept', 'application/json')
+  @Header('Content-Type', 'application/json;charset=UTF-8')
   async createHistory(
     @Body()
     body: {

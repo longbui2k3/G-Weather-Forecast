@@ -15,15 +15,6 @@ export function Search({
     try {
       const response = await fetch(`${API_ORIGIN}/api/v1/history`, {
         method: "POST",
-        // mode: "cors",
-        // credentials: "include",
-        // headers: {
-        //   "Access-Control-Allow-Credentials": "true",
-        //   "Access-Control-Allow-Origin": "*",
-        //   "Access-Control-Allow-Methods": "GET,POST,DELETE,PUT,OPTIONS",
-        //   Accept: "application/json",
-        //   "Content-Type": "application/json;charset=UTF-8",
-        // },
         body: JSON.stringify({
           location: current.name,
           date: current.last_updated,
