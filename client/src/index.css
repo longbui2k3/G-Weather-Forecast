@@ -76,6 +76,9 @@ button:disabled {
   }
 }
 @media screen and (max-width: 1300px) {
+  #root {
+    height: 100%;
+  }
   #sub__body {
     height: 100%;
     width: 100vh;
@@ -85,16 +88,17 @@ button:disabled {
   }
   #main {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: 100%;
+    overflow-y: scroll;
   }
 }
 @media screen and (max-height: 1550px) {
   #root {
-    height: 100vh;
+    height: 100%;
   }
   #sub__body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
   #main {
     width: 100%;
