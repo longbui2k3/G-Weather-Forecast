@@ -29,6 +29,8 @@ export function PageUnsubscribe() {
           textAlign: "center",
           backgroundColor: "rgb(227,242,253)",
           padding: "20px",
+          marginTop: "100px",
+          height: "calc(100vh - 100px)",
         }}
       >
         {message}

@@ -20,7 +20,6 @@ export function PageHistory() {
     <>
       <div
         style={{
-          minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
         }}
@@ -33,6 +32,9 @@ export function PageHistory() {
             flexGrow: "1",
             backgroundColor: "rgb(227,242,253)",
             padding: "20px 20px",
+            marginTop: "100px",
+            overflowY: "scroll",
+            height: "calc(100vh - 100px)",
           }}
         >
           {histories.map((history) => (
