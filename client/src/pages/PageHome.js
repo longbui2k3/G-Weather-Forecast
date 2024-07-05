@@ -11,7 +11,7 @@ export function PageHome() {
   return (
     <div id="sub__body">
       <Header title={"Weather Dashboard"} />
-      <div id="main" style={{}}>
+      <div id="main">
         <div id="left__main">
           <Search
             location={location}
@@ -25,9 +25,7 @@ export function PageHome() {
           />
           <Subscribe />
         </div>
-        <div
-          id="right__main"
-        >
+        <div id="right__main">
           {!isLoading && !isLoading2 && current ? (
             <CityWeather current={current} forecastday={forecastday} />
           ) : (

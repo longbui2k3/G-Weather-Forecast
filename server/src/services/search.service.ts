@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-const API_KEY = 'c824c4ff84e24fc2990110243242106';
+const API_KEY = 'cf867bb557d04a7bae1103557240507';
 @Injectable()
 export class SearchService {
   async search(location: string) {

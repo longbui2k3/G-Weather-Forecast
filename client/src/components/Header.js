@@ -6,6 +6,9 @@ export function Header({ title }) {
     <>
       <div
         style={{
+          position: "fixed",
+          top: 0,
+          width: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -22,7 +25,7 @@ export function Header({ title }) {
       </div>
       <div
         style={{
-          position: "absolute",
+          position: "fixed",
           right: "35px",
           top: "30px",
           display: "flex",
